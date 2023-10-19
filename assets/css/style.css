@@ -1,0 +1,81 @@
+/* Universal Styles */
+* {
+    box-sizing: border-box;
+}
+
+main img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
+
+/* Header ***************************************************/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 9vh;
+    padding: 0 2%;
+    z-index: 1;
+    background-color: #000;
+}
+
+/* Logo */
+.logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60%;
+    width: auto;
+    display: inline;
+}
+/* Logo */
+
+/* Settings*/
+.desktop {
+    display: flex;
+    align-items: center;
+}
+
+.mobile {
+    display: none;
+}
+
+.settings a {
+    /* To fit images */
+    height: 70%;
+    width: auto;
+}
+
+.settings img {
+    height: 100%;
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+    }
+}
+/* Header ***************************************************/
+
+
+
+
+/* Main */
+main {
+    margin-top: 9vh;
+}
+
+
