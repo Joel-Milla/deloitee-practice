@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+    font-family: "Open Sans", monospace, sans-serif;
+}
+
 main img {
     max-width: 50%;
     height: auto;
@@ -37,9 +42,40 @@ header {
 }
 /* Logo */
 
-/* Settings*/
-.desktop {
+/* Main-links */
+.main-links {
     display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.main-links ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main-links li {
+    margin: 0 2%;
+}
+
+.main-links a {
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main-links a:hover {
+    text-decoration: underline;
+}
+/* Main-links */
+
+/* Settings*/
+.desktop.settings {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -47,25 +83,89 @@ header {
     display: none;
 }
 
-.settings a {
+.settings {
+    width: 15%;
+    height: 100%;
+}
+
+.settings ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.settings li {
     /* To fit images */
-    height: 70%;
-    width: auto;
+    width: 30%;
+    height: 60%;
+
+    /* padding-left: 2%; */
+    border-left: 1px solid #fff;
+}
+
+.settings a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.settings a:hover {
+    opacity: 0.7;
 }
 
 .settings img {
-    height: 100%;
+    height: 45%;
     width: auto;
 }
+/* Settings*/
 
-@media only screen and (max-width: 768px) {
-    .desktop {
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    /* Turn off the desktop navigation */
+    .desktop.settings, .desktop {
         display: none;
     }
 
+    /* Adjust nav space */
+    .settings {
+        width: 25%;
+        height: 100%;
+    }
+
+    /* Style mobile settings */
     .mobile {
         display: flex;
+        justify-content: center;
         align-items: center;
+    }
+
+    .settings li {
+        /* To fit images */
+        width: 45%;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    /* Turn off the desktop navigation */
+    .desktop.main-links a {
+        font-size: 0.9rem;
+    }
+}
+
+/* 4K screens */
+@media only screen and (min-width: 1025px) {
+    .settings ul {
+        justify-content: center;
+    }
+
+    .settings img {
+        height: 45%;
+        width: auto;
     }
 }
 /* Header ***************************************************/
