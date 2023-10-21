@@ -4,16 +4,48 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Open Sans", monospace, sans-serif;
 }
 
-main img {
-    max-width: 50%;
-    height: auto;
-    display: block;
+a {
+    text-decoration: none;
 }
 
+h1 {
+    font-size: 1.75rem;
+    line-height: 2.275rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.4625rem;
+    font-weight: 400;
+}
+
+/* Font-size change */
+
+/* Mobile SE */
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) and (min-width: 400px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Larger screen sizes */
+@media only screen and (min-width: 1500px) {
+    html {
+        font-size: 20px;
+    }
+}
 
 /* Header ***************************************************/
 header {
@@ -26,6 +58,7 @@ header {
     height: 9vh;
     padding: 0 2%;
     z-index: 1;
+    border-bottom: 1px solid #fff;
     background-color: #000;
 }
 
@@ -40,7 +73,6 @@ header {
     width: auto;
     display: inline;
 }
-/* Logo */
 
 /* Main-links */
 .main-links {
@@ -62,7 +94,6 @@ header {
 
 .main-links a {
     font-size: 1rem;
-    text-decoration: none;
     font-weight: 700;
     color: #fff;
 }
@@ -70,7 +101,6 @@ header {
 .main-links a:hover {
     text-decoration: underline;
 }
-/* Main-links */
 
 /* Settings*/
 .desktop.settings {
@@ -121,7 +151,6 @@ header {
     height: 45%;
     width: auto;
 }
-/* Settings*/
 
 /* Mobile */
 @media only screen and (max-width: 480px) {
@@ -148,15 +177,6 @@ header {
         width: 45%;
     }
 }
-
-/* Tablet */
-@media only screen and (max-width: 768px) {
-    /* Turn off the desktop navigation */
-    .desktop.main-links a {
-        font-size: 0.9rem;
-    }
-}
-
 /* 4K screens */
 @media only screen and (min-width: 1025px) {
     .settings ul {
@@ -170,12 +190,69 @@ header {
 }
 /* Header ***************************************************/
 
-
-
-
-/* Main */
+/* Main ***************************************************/
 main {
     margin-top: 9vh;
 }
 
+/* Banner */
+.main_banner {
+    height: 50vh;
+    padding: 0 5%;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+}
 
+.main_banner .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    max-width: 700px;
+    padding: 1rem 0;
+}
+
+.main_banner h1 {
+    margin-bottom: 1.75rem; 
+}
+
+.main_banner h2 {
+    margin-bottom: 1.5rem;
+}
+
+.main_banner a {
+    text-align: center;
+    width: 75%;
+    padding: 1.2rem;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(38, 137, 13);
+}
+
+.main_banner a:hover {
+    background-color: rgb(37, 156, 7);
+}
+
+.main_banner a:visited {
+    color: #ececec;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .main_banner .content {
+        width: 90%;
+        justify-content: end;
+    }
+}
+
+/* Larger screens */
+@media only screen and (min-width: 1500px) {
+    .main_banner {
+        display: flex;
+        justify-content: center;
+    }
+}
+/* Main ***************************************************/
